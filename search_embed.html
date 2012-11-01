@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="javascripts/vendor/jquery-1.8.2.js" type="text/javascript"></script>
+    <script src="javascripts/vendor/underscore-1.4.2.js" type="text/javascript"></script>
+    <script src="javascripts/vendor/backbone-0.9.2.js" type="text/javascript"></script>
+    <script src="javascripts/lib/inflector.js" type="text/javascript"></script>
+    <script src="javascripts/search_embed.js" type="text/javascript"></script>
+    <script src="public/assets/templates.js" type="text/javascript"></script>
+    
+    <link href="stylesheets/search_embed.css" media="all" rel="stylesheet" type="text/css" />
+    
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      dc.embed.load('http://dev.dcloud.org/search/embed/', {
+        q: "projectid: 3224-test ",
+        container: "#container",
+        title: "",
+        order: "score",
+        per_page: 12,
+        search_bar: true,
+        organization: 1
+      });
+    </script>
+  </body>
+</html>
