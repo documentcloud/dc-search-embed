@@ -14,14 +14,15 @@
   <body>
     <div id="container"></div>
     <script>
-      dc.embed.load('http://dev.dcloud.org/search/embed/', {
-        q: "projectid: 3224-test ",
+      dc.embed.load('http://www.documentcloud.org/search/embed/', {
+        q: "projectid: 4478-2012advault",
         container: "#container",
         title: "",
         order: "score",
         per_page: 12,
         search_bar: true,
-        organization: 1
+        organization: 1,
+        click: function(e, view) { alert("clicked!"); console.log(e); return false; }
       });
     </script>
   </body>
